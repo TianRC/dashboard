@@ -86,6 +86,7 @@
         dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
 
 
-        有任何问题请联系我QQ:1129440815,持续跟新...
+
+有任何问题请联系我QQ:1129440815,持续跟新...
 
 
