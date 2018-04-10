@@ -1,10 +1,10 @@
-package com.dashboard.trc.dashboard;
+package com.dashboard.trc;
 
 /**
  * Created by trc on 2018/4/10.
  */
 
-class HighlightCR {
+public class HighlightCR {
 
     private float mStartAngle;
     private float mSweepAngle;

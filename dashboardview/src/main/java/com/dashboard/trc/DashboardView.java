@@ -1,4 +1,4 @@
-package com.dashboard.trc.dashboard;
+package com.dashboard.trc;
 
 
 import android.content.Context;
@@ -13,6 +13,9 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
+
+import com.dashboard.trc.dashboardview.R;
+
 import java.text.DecimalFormat;
 import java.util.List;
 

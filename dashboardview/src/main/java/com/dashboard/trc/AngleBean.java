@@ -1,10 +1,10 @@
-package com.dashboard.trc.dashboard;
+package com.dashboard.trc;
 
 /**
  * Created by trc on 2018/4/10.
  */
 
-class AngleBean implements Comparable<AngleBean>{
+public class AngleBean implements Comparable<AngleBean>{
     /**
      * start 是其实值
      * end 是量程
@@ -15,6 +15,7 @@ class AngleBean implements Comparable<AngleBean>{
     private String color;
     private float operator;
     private float i;
+
 
 
     public AngleBean(double start, double end, String color) {

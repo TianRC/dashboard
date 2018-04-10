@@ -4,6 +4,10 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.dashboard.trc.AngleBean;
+import com.dashboard.trc.DashBoardManager;
+import com.dashboard.trc.DashboardView;
+
 import java.util.ArrayList;
 import java.util.List;
 

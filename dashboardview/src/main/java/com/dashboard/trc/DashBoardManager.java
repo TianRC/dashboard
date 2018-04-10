@@ -1,4 +1,4 @@
-package com.dashboard.trc.dashboard;
+package com.dashboard.trc;
 
 import android.graphics.Color;
 import android.util.Log;
@@ -11,7 +11,7 @@ import java.util.List;
  * Created by trc on 2018/4/10.
  */
 
-class DashBoardManager {
+public class DashBoardManager {
     private static final String start = "startAngle";
     private static final String end = "endAngle";
 
