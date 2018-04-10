@@ -45,7 +45,7 @@
         app:sweepAngle="270" />
 
 
-### 当然你也可以在代码中使用它[example](app/src/main/java/com/dashboard/trc/dashboard/MainActivity)
+### 当然你也可以在代码中[使用](app/src/main/java/com/dashboard/trc/dashboard/MainActivity.java)
 
 
         dashboardView.setSmallSliceRadius(90);
