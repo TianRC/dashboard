@@ -8,6 +8,21 @@
 <img src="readme_resources/1.png" width="280" height="466"/> <img src="readme_resources/2.png" width="280" height="466"/> <img src="readme_resources/s3.png" width="280" height="466"/>
 
 ## 使用方法：
+### Gradle
+#### 1：In the project root directory build.gradle
+
+repositories {
+  　　//Rely on the warehouse
+　　　maven { url 'https://jitpack.io' }
+　　}
+}
+
+#### 2：The project directory build.gradle relies on the DashBoard framework
+
+
+api 'com.github.trc1993:dashboard:1.0.0'
+
+
 ### 在xml您可以这样使用它
 
 
@@ -70,4 +85,8 @@
         data.add(new AngleBean(80, 90, "#5F9EA0"));
         data.add(new AngleBean(90, 100, "#5C5C5C"));
         dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
+
+
+        有任何问题请联系我QQ:1129440815,持续跟新...
+
 
