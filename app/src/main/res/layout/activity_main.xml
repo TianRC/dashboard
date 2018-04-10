@@ -6,13 +6,21 @@
     android:layout_height="match_parent"
     tools:context="com.dashboard.trc.dashboard.MainActivity">
 
-    <TextView
+    <com.dashboard.trc.dashboard.DashboardView
+        android:id="@+id/dashboardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:foregroundGravity="center"
+        app:bigSliceCount="6"
+        app:headerRadius="20dp"
+        app:headerTitle="km/h"
+        app:maxValue="240"
+        app:measureTextSize="12sp"
+        app:radius="100dp"
+        app:startAngle="135"
+        app:stripeMode="inner"
+        app:stripeWidth="16dp"
+        app:sweepAngle="270" />
 
 </android.support.constraint.ConstraintLayout>
