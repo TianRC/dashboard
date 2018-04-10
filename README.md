@@ -19,7 +19,7 @@
 
 #### 2：The project directory build.gradle relies on the DashBoard framework
 
-        api 'com.github.trc1993:dashboard:1.0.0'
+        implementation 'com.github.trc1993:dashboard:1.0.0'
 
 
 ### 在xml您可以这样使用它
