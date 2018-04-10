@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         dashboardView.setArcColor(Color.WHITE);
         /**设置*/
         dashboardView.setNumMeaRadius(10);
-        dashboardView.setRealTimeValue(10);
+        dashboardView.setRealTimeValue(60);
         /**设置最大最下值*/
         dashboardView.setMaxValue(100);
         dashboardView.setMinValue(0);
