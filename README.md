@@ -46,13 +46,7 @@
 
 
 ### 当然你也可以在代码中使用它
-
-
-
-<iframe src="dashboardview/src/main/res/values/attrs.xml" frameborder="0"></iframe>
-
-
-
+[example](app/src/main/java/MainActivity)
         dashboardView.setSmallSliceRadius(90);
         dashboardView.setBigSliceRadius(120);
         /**设置字体颜色*/
