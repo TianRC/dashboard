@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.dashboard.trc.dashboard.MainActivity">
+
 
     <com.dashboard.trc.DashboardView
         android:id="@+id/dashboardView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
         android:foregroundGravity="center"
         app:bigSliceCount="6"
         app:headerRadius="20dp"
@@ -22,9 +26,14 @@
         app:stripeMode="inner"
         app:stripeWidth="16dp"
         app:sweepAngle="270"
-        tools:ignore="MissingConstraints"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="100dp"/>
+        tools:ignore="MissingConstraints" />
 
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:max="100"
+        android:min="0"
+        android:layout_marginTop="80dp" />
 
 </LinearLayout>

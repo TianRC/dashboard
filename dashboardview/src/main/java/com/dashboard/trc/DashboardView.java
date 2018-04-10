@@ -11,6 +11,7 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -148,7 +149,7 @@ public class DashboardView extends View {
                         strings[i] = String.valueOf(num);
                     }
                 }
-           }
+            }
         }
 
         return strings;
@@ -160,7 +161,7 @@ public class DashboardView extends View {
 
         mSmallSliceRadius = mRadius - dpToPx(10);
         mBigSliceRadius = mSmallSliceRadius - dpToPx(8);
-        mNumMeaRadius = mBigSliceRadius - dpToPx(2);
+//        mNumMeaRadius = mBigSliceRadius - dpToPx(2);
 
         mSmallSliceCount = mBigSliceCount * 5;
         mBigSliceAngle = mSweepAngle / (float) mBigSliceCount;
@@ -173,17 +174,11 @@ public class DashboardView extends View {
             case 1:
                 mStripeMode = StripeMode.INNER;
                 break;
-            case 2:
-                mStripeMode = StripeMode.OUTER;
-                break;
         }
 
         int totalRadius;
-        if (mStripeMode == StripeMode.OUTER) {
-            totalRadius = mRadius + mStripeWidth;
-        } else {
-            totalRadius = mRadius;
-        }
+
+        totalRadius = mRadius;
 
         mCenterX = mCenterY = 0.0f;
         if (mStartAngle <= 180 && mStartAngle + mSweepAngle >= 180) {
@@ -230,9 +225,7 @@ public class DashboardView extends View {
         mRectArc = new RectF(mCenterX - mRadius, mCenterY - mRadius, mCenterX + mRadius, mCenterY + mRadius);
         int r = 0;
         if (mStripeWidth > 0) {
-            if (mStripeMode == StripeMode.OUTER) {
-                r = mRadius + dpToPx(1) + mStripeWidth / 2;
-            } else if (mStripeMode == StripeMode.INNER) {
+           if (mStripeMode == StripeMode.INNER) {
                 r = mRadius + dpToPx(1) - mStripeWidth / 2;
             }
             mRectStripe = new RectF(mCenterX - r, mCenterY - r, mCenterX + r, mCenterY + r);
@@ -252,7 +245,7 @@ public class DashboardView extends View {
         mPaintValue.getTextBounds(trimFloat(mRealTimeValue), 0, trimFloat(mRealTimeValue).length(), mRectRealText);
         initAngle = getAngleFromResult(mRealTimeValue);
         mRealTimeValueAngle = getAngleFromResult(mRealTimeValue);
-       invalidate();
+        invalidate();
         mPaintValue.setTypeface(Typeface.DEFAULT);
     }
 
@@ -274,11 +267,8 @@ public class DashboardView extends View {
             mViewHeight = dpToPx(heightSize);
         } else {
             int totalRadius;
-            if (mStripeMode == StripeMode.OUTER) {
-                totalRadius = mRadius + mStripeWidth;
-            } else {
-                totalRadius = mRadius;
-            }
+            totalRadius = mRadius;
+
             if (mStartAngle >= 180 && mStartAngle + mSweepAngle <= 360) {
                 mViewHeight = totalRadius + mCircleRadius + dpToPx(2) + dpToPx(25) +
                         getPaddingTop() + getPaddingBottom() + mRectRealText.height();
@@ -358,7 +348,8 @@ public class DashboardView extends View {
             } else {
                 mPaintText.setTextAlign(Paint.Align.CENTER);
             }
-            float[] numberPoint = getCoordinatePoint(mNumMeaRadius - 20, angle);
+            float[] numberPoint = getCoordinatePoint(mNumMeaRadius, angle);
+            Log.d("DashboardView", "mNumMeaRadius:" + mNumMeaRadius);
             if (i == 0 || i == mBigSliceCount) {
                 canvas.drawText(trimFloat(Float.parseFloat(number)), numberPoint[0], numberPoint[1] + (mRectMeasures.height() / 2), mPaintText);
             } else {
@@ -418,9 +409,6 @@ public class DashboardView extends View {
                 mPaintArc.setColor(mArcColor);
                 canvas.drawArc(mRectArc, mStartAngle, mSweepAngle, false, mPaintArc);
             }
-        } else if (mStripeMode == StripeMode.OUTER) {
-            mPaintArc.setColor(mArcColor);
-            canvas.drawArc(mRectArc, mStartAngle, mSweepAngle, false, mPaintArc);
         }
 
         //表头
@@ -706,7 +694,7 @@ public class DashboardView extends View {
         return mRealTimeValue;
     }
 
-    public void setRealTimeValue(double realTimeValue) {
+    public void setRealValue(double realTimeValue) {
         DecimalFormat df = new DecimalFormat("######0.000");
         int t = Integer.valueOf("-2222");
         mRealTimeValue = Float.parseFloat(df.format(realTimeValue));
@@ -743,9 +731,7 @@ public class DashboardView extends View {
             case INNER:
                 mModeType = 1;
                 break;
-            case OUTER:
-                mModeType = 2;
-                break;
+
         }
         init();
     }
@@ -785,7 +771,6 @@ public class DashboardView extends View {
     public enum StripeMode {
         NORMAL,
         INNER,
-        OUTER
     }
 
     public int getBgColor() {
