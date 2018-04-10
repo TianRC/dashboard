@@ -1,9 +1,7 @@
 # dashboard
 Android 仪表盘，可以设置仪表盘的背景颜色数组，设置告警，为工业设置告警量身打造。
 
-
-使用方法：
-
+    <p style={{color:"#F0f"}}>使用方法：</p>
 
         /***/
         dashboardView.setSmallSliceRadius(90);
