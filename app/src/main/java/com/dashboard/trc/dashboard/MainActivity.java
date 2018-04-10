@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         /**设置字体颜色*/
         dashboardView.setTextColor(Color.BLACK);
         /***/
+
         dashboardView.setBigSliceCount(10);
         /***/
         dashboardView.setStripeWidth(20);
