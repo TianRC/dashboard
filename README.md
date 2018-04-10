@@ -88,7 +88,7 @@
 
 ## Attributes
 
-[attr.xml](www.baidu.com)
+[attr.xml](dashboardview/src/main/res/values/attrs.xml)
 
 有任何问题请联系我QQ:1129440815,持续跟新...
 
