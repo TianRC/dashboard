@@ -45,8 +45,9 @@
         app:sweepAngle="270" />
 
 
-### 当然你也可以在代码中使用它
-[example](app/src/main/java/MainActivity)
+### 当然你也可以在代码中使用它[example](app/src/main/java/MainActivity)
+
+
         dashboardView.setSmallSliceRadius(90);
         dashboardView.setBigSliceRadius(120);
         /**设置字体颜色*/
