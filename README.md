@@ -3,7 +3,7 @@ Android 仪表盘，可以设置仪表盘的背景颜色数组，设置告警，
 
 
 使用方法：
-       dashboardView = this.findViewById(R.id.dashboardView);
+        /***/
         dashboardView.setSmallSliceRadius(90);
         dashboardView.setBigSliceRadius(120);
         /**设置字体颜色*/
