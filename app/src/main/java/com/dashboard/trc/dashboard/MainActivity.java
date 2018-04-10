@@ -3,11 +3,9 @@ package com.dashboard.trc.dashboard;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.dashboard.trc.AngleBean;
 import com.dashboard.trc.DashBoardManager;
 import com.dashboard.trc.DashboardView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         dashboardView.setArcColor(Color.WHITE);
         /**设置*/
         dashboardView.setNumMeaRadius(10);
+        dashboardView.setRealTimeValue(10);
         /**设置最大最下值*/
         dashboardView.setMaxValue(100);
         dashboardView.setMinValue(0);
