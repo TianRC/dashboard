@@ -46,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
         /**设置仪表盘的色带颜色*/
         List<AngleBean> data = new ArrayList<>();
         data.add(new AngleBean(0,30,"#14b38a"));
-        data.add(new AngleBean(30,70,"#14b38a"));
-        data.add(new AngleBean(70,100,"#14b38a"));
+        data.add(new AngleBean(30,73,"#FF4081"));
+        data.add(new AngleBean(73,100,"#14b38a"));
         dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
     }
 }
