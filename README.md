@@ -1,58 +1,63 @@
-# dashboard
-Android 仪表盘。
+# Android DashBoard 仪表盘
 
-    使用方法：
-        /***/
-        dashboardView.setSmallSliceRadius(90);
-        dashboardView.setBigSliceRadius(120);
-        /**设置字体颜色*/
-        dashboardView.setTextColor(Color.BLACK);
-        /***/
-        dashboardView.setBigSliceCount(10);
-        /***/
-        dashboardView.setStripeWidth(20);
-        /***/
-        dashboardView.setHeaderRadius(40);
-        /***/
-        dashboardView.setHeaderTextSize(15);
-        /***/
-        dashboardView.setPointerRadius(60);
-        /***/
-        dashboardView.setStripeMode(DashboardView.StripeMode.INNER);
-        /**设置*/
-        dashboardView.setArcColor(Color.WHITE);
-        /**设置*/
-        dashboardView.setNumMeaRadius(10);
-        dashboardView.setRealTimeValue(10);
-        /**设置最大最下值*/
-        dashboardView.setMaxValue(100);
-        dashboardView.setMinValue(0);
-        /**设置仪表盘的色带颜色*/
-        List<AngleBean> data = new ArrayList<>();
-        data.add(new AngleBean(0,30,"#14b38a"));
-        data.add(new AngleBean(30,70,"#14b38a"));
-        data.add(new AngleBean(70,100,"#14b38a"));
-        dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
+## 效果图：
 
-
-# Android 仪表盘
-
-<a href="https://play.google.com/store/apps/details?id=com.owncloud.android"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="75"></a><a href="https://f-droid.org/packages/com.owncloud.android/"><img src="https://f-droid.org/badge/get-it-on.png" height="75"></a>
 <img src="readme_resources/gif.gif" width="280" height="466"/>
 <img src="readme_resources/1.png" width="280" height="466"/> <img src="readme_resources/2.png" width="280" height="466"/> <img src="readme_resources/s3.png" width="280" height="466"/>
 
-## Join development!
+## 使用方法：
+           在xml您可以这样使用它
 
-**Build status:** master ![](https://api.travis-ci.org/owncloud/android.svg?branch=master) stable ![](https://api.travis-ci.org/owncloud/android.svg?branch=stable)
+    <com.dashboard.trc.DashboardView
+        android:id="@+id/dashboardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="150dp"
+        android:foregroundGravity="center"
+        app:bigSliceCount="6"
+        app:headerRadius="20dp"
+        app:headerTitle="km/h"
+        app:maxValue="240"
+        app:measureTextSize="12sp"
+        app:radius="100dp"
+        app:startAngle="135"
+        app:stripeMode="inner"
+        app:stripeWidth="16dp"
+        app:sweepAngle="270" />
 
-**Start contributing:** Make sure you read [SETUP.md](https://github.com/owncloud/android/blob/master/SETUP.md) when you start working on this project. Basically: Fork this repository and contribute back using pull requests to the master branch.
-Easy starting points are also reviewing [pull requests](https://github.com/owncloud/android/pulls) and working on [junior jobs](https://github.com/owncloud/android/issues?q=is%3Aopen+is%3Aissue+label%3A%22Junior+Job%22).
+        当然你也可以在代码中使用它
 
-**IRC channel:** [#owncloud-android](https://webchat.freenode.net/?channels=owncloud-android) on freenode IRC
+        
+                dashboardView.setSmallSliceRadius(90);
+                dashboardView.setBigSliceRadius(120);
+                /**设置字体颜色*/
+                dashboardView.setTextColor(Color.BLACK);
+                /***/
+                dashboardView.setBigSliceCount(10);
+                /***/
+                dashboardView.setStripeWidth(20);
+                /***/
+                dashboardView.setHeaderRadius(40);
+                /***/
+                dashboardView.setHeaderTextSize(15);
+                /***/
+                dashboardView.setPointerRadius(60);
+                /***/
+                dashboardView.setStripeMode(DashboardView.StripeMode.INNER);
+                /**设置*/
+                dashboardView.setArcColor(Color.WHITE);
+                /**设置*/
+                dashboardView.setNumMeaRadius(10);
+                dashboardView.setRealTimeValue(10);
+                /**设置最大最下值*/
+                dashboardView.setMaxValue(100);
+                dashboardView.setMinValue(0);
+                /**设置仪表盘的色带颜色*/
+                List<AngleBean> data = new ArrayList<>();
+                data.add(new AngleBean(0,30,"#14b38a"));
+                data.add(new AngleBean(30,70,"#14b38a"));
+                data.add(new AngleBean(70,100,"#14b38a"));
+                dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
 
-**Beta version:**
-
-<a href="https://play.google.com/store/apps/details?id=com.owncloud.android.beta"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="75"></a><a href="https://f-droid.org/packages/com.owncloud.android.beta/"><img src="https://f-droid.org/badge/get-it-on.png" height="75"></a>
-
-**License:** [GPLv2](https://github.com/owncloud/android/blob/master/LICENSE.txt)
-nse:** [GPLv2](https://github.com/owncloud/android/blob/master/LICENSE.txt)
