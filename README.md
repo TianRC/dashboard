@@ -11,17 +11,13 @@
 ### Gradle
 #### 1：In the project root directory build.gradle
 
-
         repositories {
           　　//Rely on the warehouse
         　　　maven { url 'https://jitpack.io' }
         　　}
         }
 
-
 #### 2：The project directory build.gradle relies on the DashBoard framework
-
-
 
         api 'com.github.trc1993:dashboard:1.0.0'
 
