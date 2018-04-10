@@ -35,7 +35,11 @@ Android 仪表盘。
         dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
 
 
-# [ownCloud](https://owncloud.org) Android 仪表盘
+# Android 仪表盘
+
+<a href="https://play.google.com/store/apps/details?id=com.owncloud.android"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="75"></a><a href="https://f-droid.org/packages/com.owncloud.android/"><img src="https://f-droid.org/badge/get-it-on.png" height="75"></a>
+
+<img src="readme_resources/filelist_device.png" width="280"/> <img src="readme_resources/photos_device.png" width="280"/> <img src="readme_resources/share_device.png" width="280" />
 
 ## Join development!
 
@@ -51,3 +55,4 @@ Easy starting points are also reviewing [pull requests](https://github.com/owncl
 <a href="https://play.google.com/store/apps/details?id=com.owncloud.android.beta"><img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" height="75"></a><a href="https://f-droid.org/packages/com.owncloud.android.beta/"><img src="https://f-droid.org/badge/get-it-on.png" height="75"></a>
 
 **License:** [GPLv2](https://github.com/owncloud/android/blob/master/LICENSE.txt)
+nse:** [GPLv2](https://github.com/owncloud/android/blob/master/LICENSE.txt)
