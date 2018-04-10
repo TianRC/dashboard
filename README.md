@@ -86,6 +86,9 @@
         dashboardView.setStripeHighlightColorAndRange(DashBoardManager.calibration2Angle(data, dashboardView));
 
 
+## Attributes
+
+[attr.xml](www.baidu.com)
 
 有任何问题请联系我QQ:1129440815,持续跟新...
 
