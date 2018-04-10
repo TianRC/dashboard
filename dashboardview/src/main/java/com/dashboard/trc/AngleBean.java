@@ -66,10 +66,7 @@ public class AngleBean implements Comparable<AngleBean>{
     @Override
     public int compareTo(AngleBean o) {
         if (operator == 0) {
-            i = this.getEnd() - o.getEnd();//先按照年龄排序
-//            if (i == 0) {
-//                return this.index - o.getIndex();//如果年龄相等了再用分数进行排序
-//            }
+            i = this.getEnd() - o.getEnd();
         } else if (operator == 2) {
             i = this.getStart() - o.getStart();
         }

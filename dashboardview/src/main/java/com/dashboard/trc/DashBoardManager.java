@@ -34,18 +34,11 @@ public class DashBoardManager {
         for (int i = 0; i < data.size(); i++) {
             double ratioK_End = (((data.get(i).getEnd() - data.get(i).getStart()) * dashboardView.getSweepAngle() / totalK));
             double ratioK_Start = (((data.get(i).getStart()) * dashboardView.getSweepAngle() / totalK));
-            Log.d("DashBoardManager", "ratioK_Start:" + ratioK_Start);
-            Log.d("DashBoardManager", "ratioK_End:" + ratioK_End);
-            Log.d("DashBoardManager", "dashboardView.getStartAngle():" + dashboardView.getStartAngle());
-            Log.d("DashBoardManager=", data.get(i).getColor());
-            highlight.add(new HighlightCR(dashboardView.getStartAngle() + ratioK_Start,
+          highlight.add(new HighlightCR(dashboardView.getStartAngle() + ratioK_Start,
                     ratioK_End,
                     Color.parseColor(data.get(i).getColor())));
         }
         Collections.reverse(highlight);
-        for (int i = 0; i < highlight.size(); i++) {
-            Log.d("DashBoardManager", "highlight.get(i).getColor():" + highlight.get(i).getColor());
-        }
         return highlight;
     }
 }
